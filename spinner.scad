@@ -2,7 +2,6 @@
 height = 7;
 diameter = 23;
 wings = 4;
-//shell thickness
 shell = 4;
 
 union() {
@@ -17,7 +16,7 @@ union() {
 module bearingCylinder (height = height, diameter = diameter) {
     inner = diameter + 1.5;
     outer = diameter + shell;
-    difference() {      
+    difference() {
         //https://doc.cgal.org/latest/Minkowski_sum_3/index.html
         minkowski() {
             $fn = 360;
